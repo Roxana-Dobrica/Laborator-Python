@@ -2,11 +2,15 @@ import psycopg2
 import os
 import shutil
 import pygame
+import logging
 from zipfile import ZipFile
 
 #de adaugat loguri rulare program
 
 song_storage_path = 'C:\\Users\\Roxana\\Desktop\\SongStorage'
+log_file_path = os.path.join(song_storage_path, 'song_storage_log.log')
+
+logging.basicConfig(filename=log_file_path, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def connect_to_database():
     try:
@@ -17,10 +21,10 @@ def connect_to_database():
             password="password",
             port=5432
         )
-        print("Connected to the database.")
+        logging.info("Connected to the database.")
         return conn
     except psycopg2.Error as e:
-        print("Unable to connect to the database: {e}")
+        logging.error("Unable to connect to the database: %s", e)
         return None
 
 
@@ -37,11 +41,11 @@ def is_valid_file(file_path):
 def add_song_to_database(conn, file_path, artist, title, release_date, tags):
     try:
         if not file_exists(file_path):
-            print(f"File does not exist: {file_path}")
+            logging.warning(f"File does not exist: {file_path}")
             return None
 
         if not is_valid_file(file_path):
-            print(f"Invalid file type: {file_path}")
+            logging.warning(f"Invalid file type: {file_path}")
             return None
 
         cursor = conn.cursor()
@@ -67,10 +71,10 @@ def add_song_to_database(conn, file_path, artist, title, release_date, tags):
             """, (song_id, tag))
 
         conn.commit()
-        print(f"Song added successfully with ID: {song_id}")
+        logging.info(f"Song added successfully with ID: {song_id}")
         return song_id
     except psycopg2.Error as e:
-        print(f"Unable to add song: {e}")
+        logging.error("Unable to add song: %s", e)
         return None
 
 
@@ -87,15 +91,16 @@ def add_song_to_storage(file_path):
             raise FileExistsError(f"A file with the same name already exists in the storage folder: {destination}")
 
         shutil.copy2(file_path, destination)
+        logging.info(f"Song added to storage: {destination}")
         return destination
     except FileNotFoundError as e:
-        print(f"Error: {e}")
+        logging.error(f"Error: {e}")
         return None
     except FileExistsError as e:
-        print(f"Error: {e}")
+        logging.error(f"Error: {e}")
         return None
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
         return None
 
 
@@ -120,13 +125,13 @@ def delete_song_from_database(conn, song_id):
             """, (song_id,))
 
             conn.commit()
-            print(f"Song deleted successfully with ID: {song_id}")
+            logging.info(f"Song deleted successfully with ID: {song_id}")
             return True
         else:
-            print(f"Song with ID {song_id} does not exist in the database.")
+            logging.warning(f"Song with ID {song_id} does not exist in the database.")
             return False
     except psycopg2.Error as e:
-        print(f"Unable to delete song: {e}")
+        logging.error("Unable to delete song: %s", e)
         return False
 
 
@@ -136,12 +141,13 @@ def delete_song_from_storage(file_path):
             raise FileNotFoundError(f"The file '{file_path}' does not exist.")
 
         os.remove(file_path)
+        logging.info(f"Song deleted from storage: {file_path}")
         return True
     except FileNotFoundError as e:
-        print(f"Error: {e}")
+        logging.error(f"Error: {e}")
         return False
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
         return False
 
 
@@ -195,13 +201,13 @@ def update_song(conn, song_id, artist=None, title=None, release_date=None, tags=
                     """, (song_id, tag))
 
             conn.commit()
-            print(f"Song updated successfully with ID: {song_id}")
+            logging.info(f"Song updated successfully with ID: {song_id}")
             return True
         else:
-            print(f"Song with ID {song_id} does not exist in the database.")
+            logging.warning(f"Song with ID {song_id} does not exist in the database.")
             return False
     except psycopg2.Error as e:
-        print(f"Unable to update song: {e}")
+        logging.error("Unable to update song: %s", e)
         return False
 
 
@@ -218,15 +224,16 @@ def search_songs(conn, criteria):
         result = cursor.fetchall()
 
         if result:
-            print("Results:")
+            logging.info("Search results:")
             for song in result:
-                print(f"ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}")
+                logging.info(
+                    f"ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}")
         else:
-            print("No matching songs found.")
+            logging.warning("No matching songs found.")
 
         return result
     except psycopg2.Error as e:
-        print(f"An error occured: {e}")
+        logging.error("An error occurred during search: %s", e)
         return None
 
 
@@ -236,7 +243,7 @@ def create_save_list(conn, output_archive, criteria):
         songs_to_archive = search_songs(conn, criteria)
 
         if not songs_to_archive:
-            print("No matching songs found.")
+            logging.warning("No matching songs found.")
             return False
         else:
             with ZipFile(output_archive, 'w') as archive:
@@ -245,10 +252,10 @@ def create_save_list(conn, output_archive, criteria):
                     if os.path.exists(song_path):
                         archive.write(song_path, os.path.basename(song_path))
 
-        print(f"Save list created successfully: {output_archive}")
+        logging.info(f"Save list created successfully: {output_archive}")
         return True
     except Exception as e:
-        print(f"An error occurred while creating the save list: {e}")
+        logging.error(f"An error occurred while creating the save list: {e}")
         return False
 
 
@@ -260,17 +267,19 @@ def play_song(file_path):
         played_song = pygame.mixer.Sound(file_path)
         played_song.play()
 
-        input("Press Enter to stop playback...")
+        logging.info(f"Song started: {file_path}")
+        input("Press Enter to stop the song...")
 
     except FileNotFoundError as e:
-        print(f"Error: {e}")
+        logging.error(f"Error: {e}")
         return False
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
         return False
 
-    
+
 #de inlocuit path ul hardcodat cu song_storage_path
+#de terminat programul dupa ce se termina cantecul, nu neaparat dupa ce dai enter???
 
 database_connection = connect_to_database()
 if database_connection:
