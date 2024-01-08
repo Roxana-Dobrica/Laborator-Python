@@ -1,0 +1,2272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>main API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import psycopg2
+import os
+import shutil
+import pygame
+import logging
+import keyboard
+from datetime import datetime
+from zipfile import ZipFile
+
+song_storage_path = &#39;C:\\Users\\Roxana\\Desktop\\SongStorage&#39;
+log_file_path = os.path.join(song_storage_path, &#39;song_storage_log.log&#39;)
+
+logging.basicConfig(filename=log_file_path, level=logging.DEBUG, format=&#39;%(asctime)s - %(levelname)s - %(message)s&#39;)
+
+
+def connect_to_database():
+    &#34;&#34;&#34;
+    Connects to the database using the psycopg2 library.
+
+    Parameters
+    ----------
+        None
+
+    Returns
+    -------
+        psycopg2.extensions.connection or None: The active database connection, or None if the connection fails.
+
+    Raises
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        conn = psycopg2.connect(
+            host=&#34;localhost&#34;,
+            database=&#34;SongStorageDB&#34;,
+            user=&#34;postgres&#34;,
+            password=&#34;password&#34;,
+            port=5432
+        )
+        logging.info(&#34;Connected to the database.&#34;)
+        return conn
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to connect to the database: %s&#34;, e)
+        return None
+
+
+def file_exists(file_path):
+    &#34;&#34;&#34;
+    Checks if a file exists.
+
+    Parameters
+    ----------
+        file_path (str): The file path to check.
+
+    Returns
+    -------
+        bool: True if the file exists, False otherwise.
+    &#34;&#34;&#34;
+    return os.path.exists(file_path)
+
+
+def is_valid_file(file_path):
+    &#34;&#34;&#34;
+    Checks if a file has a valid file type.
+
+    Parameters
+    ----------
+        file_path (str): The file path to check.
+
+    Returns
+    -------
+        bool: True if the file has a valid file type, False otherwise.
+    &#34;&#34;&#34;
+    valid_extensions = {&#39;.mp3&#39;, &#39;.wav&#39;, &#39;.aac&#39;, &#39;.wma&#39;, &#39;.flac&#39;}
+    _, file_extension = os.path.splitext(file_path)
+    return file_extension.lower() in valid_extensions
+
+
+def is_valid_date(date_string):
+    &#34;&#34;&#34;
+    Checks if a date string has a valid YYYY-MM-DD format.
+
+    Parameters
+    ----------
+        date_string (str): The date string to check.
+
+    Returns
+    -------
+        bool: True if the date string has a valid format, False otherwise.
+    &#34;&#34;&#34;
+    try:
+        datetime.strptime(date_string, &#39;%Y-%m-%d&#39;)
+        return True
+    except ValueError:
+        return False
+
+
+def get_all_tags(conn):
+    &#34;&#34;&#34;
+    Retrieves all tags from the &#39;tags&#39; table.
+
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+
+    Returns:
+    -------
+        list or None: A list of tags, or None if the operation fails.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;SELECT id, name FROM tags&#34;)
+        result = cursor.fetchall()
+
+        tags_list = [{&#34;id&#34;: tag[0], &#34;name&#34;: tag[1]} for tag in result]
+        return tags_list
+    except psycopg2.Error as e:
+        logging.error(&#34;An error occurred while retrieving tags: %s&#34;, e)
+        print(f&#34;An error occurred while retrieving tags: {e}&#34;)
+        return None
+
+
+def get_all_songtags(conn):
+    &#34;&#34;&#34;
+    Retrieves all entries from the &#39;songtags&#39; table.
+
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+
+    Returns:
+    -------
+        list or None: A list of songtags, or None if the operation fails.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;SELECT song_id, tag_id FROM songtags&#34;)
+        result = cursor.fetchall()
+
+        songtags_list = [{&#34;song_id&#34;: songtag[0], &#34;tag_id&#34;: songtag[1]} for songtag in result]
+        return songtags_list
+    except psycopg2.Error as e:
+        logging.error(&#34;An error occurred while retrieving songtags: %s&#34;, e)
+        print(f&#34;An error occurred while retrieving songtags: {e}&#34;)
+        return None
+
+
+def add_song_to_database(conn, file_path, artist, title, release_date, tags):
+    &#34;&#34;&#34;
+        Adds a new song to the database.
+
+        This function takes the necessary information about a song and inserts this information into the
+        &#39;songs&#39;, &#39;tags&#39;, and &#39;songtags&#39; tables in the database. It performs checks to ensure the file
+        exists and has a valid file type. \n
+        Parameters
+        ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        file_path (str): The file path of the song.
+        artist (str): The artist of the song.
+        title (str): The title of the song.
+        release_date (str): The release date of the song.
+        tags (list): A list of tags associated with the song. \n
+
+        Returns
+        -------
+        int or None: The ID of the added song in the &#39;songs&#39; table, or None if the addition fails.\n
+
+        Raises
+        ------
+        psycopg2.Error: If an error occurs during the database transaction.
+        FileNotFoundError: If the specified file_path does not exist.
+        ValueError: If the file type is not supported.
+        &#34;&#34;&#34;
+    try:
+        if not file_exists(file_path):
+            logging.warning(f&#34;File does not exist: {file_path}&#34;)
+            print(f&#34;File does not exist: {file_path}&#34;)
+            return None
+
+        if not is_valid_file(file_path):
+            logging.warning(f&#34;Invalid file type: {file_path}&#34;)
+            print(f&#34;Invalid file type: {file_path}&#34;)
+            return None
+
+        if not is_valid_date(release_date):
+            logging.warning(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+            print(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+            return None
+
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            INSERT INTO songs(file_path, artist, title, release_date)
+            VALUES (%s, %s, %s, %s)
+            RETURNING id;
+        &#34;&#34;&#34;, (file_path, artist, title, release_date))
+
+        song_id = cursor.fetchone()[0]
+
+        for tag in tags:
+            cursor.execute(&#34;&#34;&#34;
+                INSERT INTO tags(name)
+                VALUES (%s)
+                ON CONFLICT (name) DO NOTHING;
+            &#34;&#34;&#34;, (tag,))
+
+            cursor.execute(&#34;&#34;&#34;
+                INSERT INTO songtags(song_id, tag_id)
+                VALUES (%s, (SELECT id FROM tags WHERE name = %s));
+            &#34;&#34;&#34;, (song_id, tag))
+
+        conn.commit()
+        logging.info(f&#34;Song added successfully with ID: {song_id}&#34;)
+        print(f&#34;Song added successfully: {song_id} - {artist} - {title} - {release_date} - {tags}&#34;)
+        return song_id
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to add song: %s&#34;, e)
+        print(f&#34;Failed to add song to database. {e}&#34;)
+        return None
+
+
+def add_song_to_storage(file_path):
+    &#34;&#34;&#34;
+    Adds a new song to the storage folder.
+
+    This function takes the file path of a song and copies it to the storage folder. It performs
+    checks to ensure the file exists and does not already exist in the storage folder.
+
+    Parameters
+    ----------
+        file_path (str): The file path of the song.
+
+    Returns
+    -------
+        str or None: The file path of the song in the storage folder, or None if the addition fails.
+
+    Raises
+    ------
+        FileNotFoundError: If the specified file_path does not exist.
+        FileExistsError: If a file with the same name already exists in the storage folder.
+        shutil.Error: If an error occurs during the file copy.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f&#34;The file &#39;{file_path}&#39; does not exist.&#34;)
+
+        file_name = os.path.basename(file_path)
+        destination = os.path.join(song_storage_path, file_name)
+
+        if os.path.exists(destination):
+            raise FileExistsError(f&#34;A file with the same name already exists in the storage folder: {destination}&#34;)
+
+        try:
+            shutil.copy2(file_path, destination)
+        except shutil.Error as e:
+            logging.error(f&#34;Error copying file: {e}&#34;)
+            return None
+        logging.info(f&#34;Song added to storage: {destination}&#34;)
+        print(f&#34;Song added successfully to storage: {destination}&#34;)
+        return destination
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;Failed to add song to storage. {e}&#34;)
+        return None
+    except FileExistsError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;Failed to add song to storage. {e}&#34;)
+        return None
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;Failed to add song to storage. {e}&#34;)
+        return None
+
+
+def add_song(file_path, artist, title, release_date, tags):
+    &#34;&#34;&#34;
+    Adds a new song to the database and storage folder.
+
+    This function takes the necessary information about a song and inserts this information into the
+    &#39;songs&#39;, &#39;tags&#39;, and &#39;songtags&#39; tables in the database. It also copies the song to the storage folder.
+    It performs checks to ensure the file exists and has a valid file type.
+
+    Parameters
+    ----------
+        file_path (str): The file path of the song.
+        artist (str): The artist of the song.
+        title (str): The title of the song.
+        release_date (str): The release date of the song.
+        tags (list): A list of tags associated with the song.
+
+    Returns
+    -------
+        int or None: The ID of the added song in the &#39;songs&#39; table, or None if the addition fails.
+
+    Raises
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+        FileNotFoundError: If the specified file_path does not exist.
+        ValueError: If the file type is not supported.
+    &#34;&#34;&#34;
+    database_connection = connect_to_database()
+    if database_connection:
+        song_id = add_song_to_database(database_connection, file_path, artist, title, release_date, tags)
+        if song_id:
+            add_song_to_storage(file_path)
+            database_connection.close()
+            return song_id
+        else:
+            database_connection.close()
+            return None
+    else:
+        return None
+
+
+def delete_song_from_database(conn, song_id):
+
+    &#34;&#34;&#34;
+    Deletes a song from the database.
+
+    This function removes a song and its associated tags from the &#39;songs&#39; table and &#39;tags&#39; table
+    in the database. It performs checks to ensure the song exists in the database. \n
+
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be deleted.
+    Returns:
+    -------
+        bool: True if the deletion is successful, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            SELECT id FROM songs WHERE id = %s;
+        &#34;&#34;&#34;, (song_id,))
+        existing_id = cursor.fetchone()
+
+        if existing_id:
+            cursor.execute(&#34;&#34;&#34;
+                DELETE FROM songtags 
+                WHERE song_id = %s;
+            &#34;&#34;&#34;, (song_id,))
+
+            cursor.execute(&#34;&#34;&#34;
+                DELETE FROM songs
+                WHERE id = %s;
+            &#34;&#34;&#34;, (song_id,))
+
+            conn.commit()
+            logging.info(f&#34;Song deleted successfully with ID: {song_id}&#34;)
+            print(f&#34;Song deleted successfully with ID: {song_id}&#34;)
+            return True
+        else:
+            logging.warning(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            print(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            return False
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to delete song: %s&#34;, e)
+        print(f&#34;Failed to delete song from database. {e}&#34;)
+        return False
+
+
+def delete_song_from_storage(file_name):
+    &#34;&#34;&#34;
+    Deletes a song from the storage folder.
+
+    This function removes a song from the storage folder. It performs checks to ensure the song exists
+    in the storage folder.
+
+    Parameters
+    ----------
+        file_name (str): The file name of the song to be deleted.
+
+    Returns
+    -------
+        bool: True if the deletion is successful, False otherwise.
+
+    Raises
+    ------
+        FileNotFoundError: If the specified file_name does not exist in the storage folder.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    try:
+        storage_path = os.path.join(song_storage_path, file_name)
+
+        if not os.path.exists(storage_path):
+            raise FileNotFoundError(f&#34;The file &#39;{storage_path}&#39; does not exist.&#34;)
+
+        os.remove(storage_path)
+        logging.info(f&#34;Song deleted from storage: {storage_path}&#34;)
+        print(f&#34;Song deleted successfully from storage: {storage_path}&#34;)
+        return True
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;The file does not exist.&#34;)
+        return False
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;Failed to delete song from storage. {e}&#34;)
+        return False
+
+
+def get_song_path_from_database(conn, song_id):
+    &#34;&#34;&#34;
+    Retrieves the file path of a song from the database.
+
+    Parameters
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be retrieved.
+
+    Returns
+    -------
+        str or None: The file path of the song, or None if the song does not exist in the database.
+
+    Raises
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            SELECT file_path FROM songs WHERE id = %s;
+        &#34;&#34;&#34;, (song_id,))
+        result = cursor.fetchone()
+
+        if result:
+            song_path = result[0]
+            logging.info(f&#34;Song path retrieved successfully: {song_path}&#34;)
+            print(f&#34;Song path retrieved successfully: {song_path}&#34;)
+            return song_path
+        else:
+            logging.warning(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            print(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            return None
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to retrieve song path: %s&#34;, e)
+        print(f&#34;Failed to retrieve song path from database. {e}&#34;)
+        return None
+
+
+def delete_song(song_id):
+    &#34;&#34;&#34;
+    Deletes a song from the database and storage folder.
+
+    This function removes a song and its associated tags from the &#39;songs&#39; table and &#39;tags&#39; table
+    in the database. It also removes the song from the storage folder. It performs checks to ensure
+    the song exists in the database and storage folder.
+
+    Parameters:
+    ----------
+        song_id (int): The ID of the song to be deleted.
+
+    Returns:
+    -------
+        bool: True if the deletion is successful, False otherwise.
+
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+        FileNotFoundError: If the specified file_name does not exist in the storage folder.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    database_connection = connect_to_database()
+
+    if database_connection:
+        try:
+            song_path = get_song_path_from_database(database_connection, song_id)
+            if delete_song_from_database(database_connection, song_id):
+                if song_path:
+                    file_name = os.path.basename(song_path)
+                    delete_song_from_storage(file_name)
+                    return True
+                else:
+                    return False
+            else:
+                return False
+
+        finally:
+            database_connection.close()
+    else:
+        return False
+
+
+def modify_data(conn, song_id, artist=None, title=None, release_date=None, tags=None):
+    &#34;&#34;&#34;
+    Modifies the metadata of a song in the database.
+
+    This function modifies the metadata of a song in the &#39;songs&#39; table in the database. It performs
+    checks to ensure the song exists in the database. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be modified.
+        artist (str): The new artist of the song.
+        title (str): The new title of the song.
+        release_date (str): The new release date of the song.
+        tags (list): A list of new tags associated with the song.
+    Returns:
+    -------
+        bool: True if the modification is successful, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            SELECT id FROM songs WHERE id = %s;
+        &#34;&#34;&#34;, (song_id,))
+        existing_id = cursor.fetchone()
+
+        if existing_id:
+            if artist:
+                cursor.execute(&#34;&#34;&#34;
+                    UPDATE songs
+                    SET artist = %s
+                    WHERE id = %s;
+                &#34;&#34;&#34;, (artist, song_id))
+
+            if title:
+                cursor.execute(&#34;&#34;&#34;
+                    UPDATE songs
+                    SET title = %s
+                    WHERE id = %s;
+                &#34;&#34;&#34;, (title, song_id))
+
+            if release_date:
+                if not is_valid_date(release_date):
+                    logging.warning(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+                    print(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+                    return False
+                cursor.execute(&#34;&#34;&#34;
+                    UPDATE songs
+                    SET release_date = %s
+                    WHERE id = %s;
+                &#34;&#34;&#34;, (release_date, song_id))
+
+            if tags:
+                cursor.execute(&#34;&#34;&#34;
+                    DELETE FROM songtags 
+                    WHERE song_id = %s;
+                &#34;&#34;&#34;, (song_id,))
+
+                for tag in tags:
+                    cursor.execute(&#34;&#34;&#34;
+                        INSERT INTO tags(name)
+                        VALUES (%s)
+                        ON CONFLICT (name) DO NOTHING;
+                    &#34;&#34;&#34;, (tag,))
+
+                    cursor.execute(&#34;&#34;&#34;
+                        INSERT INTO songtags(song_id, tag_id)
+                        VALUES (%s, (SELECT id FROM tags WHERE name = %s));
+                    &#34;&#34;&#34;, (song_id, tag))
+
+            conn.commit()
+            logging.info(f&#34;Song updated successfully with ID: {song_id}&#34;)
+            print(f&#34;Song updated successfully: {song_id} - {artist} - {title} - {release_date} - {tags}&#34;)
+            return True
+        else:
+            logging.warning(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            print(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            return False
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to update song: %s&#34;, e)
+        print(f&#34;Failed to update song in database. {e}&#34;)
+        return False
+
+
+def search_songs(conn, criteria):
+    &#34;&#34;&#34;
+    Searches for songs based on the specified criteria.
+
+    This function searches for songs in the &#39;songs&#39; table in the database based on the specified criteria. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        criteria (dict): A dictionary containing the search criteria.
+    Returns:
+    -------
+        list or None: A list of songs matching the search criteria, or None if the search fails.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        query = &#34;&#34;&#34;
+            SELECT s.id, s.file_path, s.artist, s.title, s.release_date, COALESCE(array_agg(t.name), ARRAY[]::text[])
+            FROM songs s
+            LEFT JOIN songtags st ON s.id = st.song_id
+            LEFT JOIN tags t ON st.tag_id = t.id
+            WHERE true
+        &#34;&#34;&#34;
+
+        for key, value in criteria.items():
+            if key == &#39;tags&#39;:
+                tags_condition = &#39; OR &#39;.join([f&#34;t.name LIKE &#39;%{tag}%&#39;&#34; for tag in value])
+                if tags_condition:
+                    query += f&#34; AND ({tags_condition})&#34;
+            elif key == &#39;release_date&#39;:
+                if is_valid_date(value):
+                    query += f&#34; AND {key} = &#39;{value}&#39;::date&#34;
+            elif key == &#39;file_extension&#39;:
+                if value:
+                    query += f&#34; AND s.file_path ILIKE &#39;%{value}&#39;&#34;
+            else:
+                if value:
+                    query += f&#34; AND {key} LIKE &#39;%{value}%&#39;&#34;
+
+        query += &#34; GROUP BY s.id, s.file_path, s.artist, s.title, s.release_date&#34;
+
+        cursor.execute(query)
+        result = cursor.fetchall()
+
+        if result:
+            logging.info(&#34;Search results:&#34;)
+            print(&#34;Search results:&#34;)
+            for song in result:
+                logging.info(
+                    f&#34;ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}, Tags: {song[5]}&#34;)
+                print(
+                    f&#34;ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}, Tags: {song[5]}&#34;)
+        else:
+            logging.warning(&#34;No matching songs found.&#34;)
+            print(&#34;No matching songs found.&#34;)
+
+        return result
+    except psycopg2.Error as e:
+        logging.error(&#34;An error occurred during search: %s&#34;, e)
+        print(f&#34;An error occurred during search: {e}&#34;)
+        return None
+
+
+def create_save_list(conn, output_archive, criteria):
+    &#34;&#34;&#34;
+    Creates a save list of songs matching the search criteria.
+
+    This function searches for songs in the &#39;songs&#39; table in the database based on the specified criteria.
+    It then creates a save list of the songs in the storage folder. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        output_archive (str): The path of the output archive.
+        criteria (dict): A dictionary containing the search criteria.
+    Returns:
+    -------
+        bool: True if the save list is created successfully, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        if not (output_archive.lower().endswith(&#39;.zip&#39;) or output_archive.lower().endswith(&#39;.rar&#39;)) :
+            output_archive += &#39;.zip&#39;
+
+        songs_to_archive = search_songs(conn, criteria)
+
+        if not songs_to_archive:
+            logging.warning(&#34;No matching songs found.&#34;)
+            print(&#34;No matching songs found.&#34;)
+            return False
+        else:
+            destination_path = os.path.join(song_storage_path, os.path.basename(output_archive))
+            with ZipFile(destination_path, &#39;w&#39;) as archive:
+                for song in songs_to_archive:
+                    song_path = song[1]
+                    if os.path.exists(song_path):
+                        archive.write(song_path, os.path.basename(song_path))
+
+        logging.info(f&#34;Save list created successfully: {output_archive}&#34;)
+        print(f&#34;Save list created successfully: {output_archive}&#34;)
+        return True
+    except Exception as e:
+        logging.error(f&#34;An error occurred while creating the save list: {e}&#34;)
+        print(f&#34;An error occurred while creating the save list: {e}&#34;)
+        return False
+
+
+def play_song(file_path):
+    &#34;&#34;&#34;
+    Plays a song.
+
+    This function plays a song using the Pygame library. It performs checks to ensure the file exists
+    and has a valid file type. \n
+    Parameters:
+    ----------
+        file_path (str): The file path of the song.
+    Returns:
+    -------
+        bool: True if the song is played successfully, False otherwise.
+    Raises:
+    ------
+        FileNotFoundError: If the specified file_path does not exist.
+        pygame.error: If an error occurs during the song playback.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f&#34;The file &#39;{file_path}&#39; does not exist.&#34;)
+
+        pygame.init()
+        played_song = pygame.mixer.Sound(file_path)
+        played_song.play()
+
+        logging.info(f&#34;Song started: {file_path}&#34;)
+        print(f&#34;Song started: {file_path}&#34;)
+
+        while pygame.mixer.get_busy() and not keyboard.is_pressed(&#39;enter&#39;):
+            pygame.time.Clock().tick(10)
+
+        pygame.mixer.stop()
+        pygame.quit()
+
+        logging.info(f&#34;Song stopped: {file_path}&#34;)
+        print(f&#34;Song stopped: {file_path}&#34;)
+
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;The file does not exist.&#34;)
+        return False
+    except pygame.error as e:
+        logging.error(f&#34;Pygame error: {e}&#34;)
+        print(f&#34;Pygame error: {e}&#34;)
+        return False
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;An unexpected error occurred: {e}&#34;)
+        return False
+
+
+def play_song_by_id(conn, song_id):
+    &#34;&#34;&#34;
+    Plays a song based on its ID.
+
+    This function retrieves the file path of a song using the specified ID from the database
+    and plays the song using the Pygame library.
+
+    Parameters
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be played.
+
+    Returns
+    -------
+        bool: True if the song is played successfully, False otherwise.
+
+    Raises
+    ------
+        FileNotFoundError: If the specified file_path does not exist.
+        pygame.error: If an error occurs during the song playback.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        # Retrieve file path based on song_id
+        cursor.execute(f&#34;SELECT file_path FROM songs WHERE id = {song_id}&#34;)
+        result = cursor.fetchone()
+
+        if not result:
+            logging.warning(f&#34;No song found with ID {song_id}.&#34;)
+            print(f&#34;No song found with ID {song_id}.&#34;)
+            return False
+
+        file_path = result[0]
+
+        if not os.path.exists(file_path) or not is_valid_file(file_path):
+            raise FileNotFoundError(f&#34;The file &#39;{file_path}&#39; does not exist or is not a valid audio file.&#34;)
+
+        pygame.init()
+        played_song = pygame.mixer.Sound(file_path)
+        played_song.play()
+
+        logging.info(f&#34;Song started: {file_path}&#34;)
+        print(f&#34;Song started: {file_path}&#34;)
+
+        while pygame.mixer.get_busy() and not keyboard.is_pressed(&#39;enter&#39;):
+            pygame.time.Clock().tick(10)
+
+        pygame.mixer.stop()
+        pygame.quit()
+
+        logging.info(f&#34;Song stopped: {file_path}&#34;)
+        print(f&#34;Song stopped: {file_path}&#34;)
+        return True
+
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;The file does not exist or is not a valid audio file.&#34;)
+        return False
+    except psycopg2.Error as e:
+        logging.error(f&#34;Database error: {e}&#34;)
+        print(f&#34;Database error: {e}&#34;)
+        return False
+    except pygame.error as e:
+        logging.error(f&#34;Pygame error: {e}&#34;)
+        print(f&#34;Pygame error: {e}&#34;)
+        return False
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;An unexpected error occurred: {e}&#34;)
+        return False
+
+
+def show_all_songs():
+    &#34;&#34;&#34;
+    Displays all songs in the database.
+
+    This function displays all songs in the &#39;songs&#39; table in the database and associated tags. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+    Returns:
+    -------
+        bool: True if the songs are displayed successfully, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    conn = connect_to_database()
+    try:
+        cursor = conn.cursor()
+        cursor.execute(&#34;&#34;&#34;
+            SELECT s.id, s.file_path, s.artist, s.title, s.release_date, COALESCE(array_agg(t.name), ARRAY[]::text[]) AS tags
+            FROM songs s
+            LEFT JOIN songtags st ON s.id = st.song_id
+            LEFT JOIN tags t ON st.tag_id = t.id
+            GROUP BY s.id
+        &#34;&#34;&#34;)
+        result = cursor.fetchall()
+        if result:
+            print(&#34;All songs:&#34;)
+            for song in result:
+                print(
+                    f&#34;ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}, Tags: {song[5]}&#34;)
+            logging.info(&#34;All songs displayed successfully.&#34;)
+        else:
+            print(&#34;No songs found.&#34;)
+            logging.warning(&#34;No songs found.&#34;)
+    except psycopg2.Error as e:
+        print(f&#34;An error occurred during search: {e}&#34;)
+        logging.error(&#34;An error occurred during search: %s&#34;, e)
+        return None
+    finally:
+        conn.close()
+
+
+if __name__ == &#39;__main__&#39;:
+    conn = connect_to_database()
+
+    print(&#34;Welcome to Song Storage App!&#34;)
+
+    while True:
+        print(&#34;----------------------------------------------&#34;)
+        print(&#34;Please choose one of the following options:&#34;)
+        print(&#34;1. Add a song to the database&#34;)
+        print(&#34;2. Delete a song from the database&#34;)
+        print(&#34;3. Modify metadata&#34;)
+        print(&#34;4. Search songs&#34;)
+        print(&#34;5. Create save list&#34;)
+        print(&#34;6. Play song by path&#34;)
+        print(&#34;7. Play song by ID&#34;)
+        print(&#34;8. Show all songs&#34;)
+        print(&#34;9. Show all tags&#34;)
+        print(&#34;10. Show all songtags&#34;)
+        print(&#34;0. Exit&#34;)
+        print(&#34;----------------------------------------------&#34;)
+
+        choice = input(&#34;Enter the number of your choice (or 0 to exit): &#34;)
+
+        if choice == &#39;1&#39;:
+            file_path = input(&#34;Enter the file path: &#34;)
+            artist = input(&#34;Enter the artist: &#34;)
+            title = input(&#34;Enter the title: &#34;)
+            release_date = input(&#34;Enter the release date (YYYY-MM-DD): &#34;)
+            tags = input(&#34;Enter the tags (comma-separated): &#34;).split(&#39;,&#39;)
+            add_song(file_path, artist, title, release_date, tags)
+
+        elif choice == &#39;2&#39;:
+            song_id = input(&#34;Enter the song ID: &#34;)
+            delete_song(song_id)
+
+        elif choice == &#39;3&#39;:
+            song_id = input(&#34;Enter the song ID: &#34;)
+            artist = input(&#34;Enter the artist (or press Enter to skip): &#34;)
+            title = input(&#34;Enter the title (or press Enter to skip): &#34;)
+            release_date = input(&#34;Enter the release date (YYYY-MM-DD) (or press Enter to skip): &#34;)
+            tags = input(&#34;Enter the tags (comma-separated) (or press Enter to skip): &#34;).split(&#39;,&#39;)
+            modify_data(conn, song_id, artist, title, release_date, tags)
+
+        elif choice == &#39;4&#39;:
+            criteria = {}
+            artist = input(&#34;Enter the artist (or press Enter to skip): &#34;)
+            if artist:
+                criteria[&#39;artist&#39;] = artist
+            title = input(&#34;Enter the title (or press Enter to skip): &#34;)
+            if title:
+                criteria[&#39;title&#39;] = title
+            release_date = input(&#34;Enter the release date (YYYY-MM-DD) (or press Enter to skip): &#34;)
+            if release_date:
+                criteria[&#39;release_date&#39;] = release_date
+            tags = input(&#34;Enter the tags (comma-separated) (or press Enter to skip): &#34;).split(&#39;,&#39;)
+            if tags:
+                criteria[&#39;tags&#39;] = tags
+            file_extension = input(&#34;Enter the file extension (or press Enter to skip): &#34;)
+            if file_extension:
+                criteria[&#39;file_extension&#39;] = file_extension
+            search_songs(conn, criteria)
+
+        elif choice == &#39;5&#39;:
+            output_archive = input(&#34;Enter the output archive path: &#34;)
+            criteria = {}
+            artist = input(&#34;Enter the artist (or press Enter to skip): &#34;)
+            if artist:
+                criteria[&#39;artist&#39;] = artist
+            title = input(&#34;Enter the title (or press Enter to skip): &#34;)
+            if title:
+                criteria[&#39;title&#39;] = title
+            release_date = input(&#34;Enter the release date (YYYY-MM-DD) (or press Enter to skip): &#34;)
+            if release_date:
+                criteria[&#39;release_date&#39;] = release_date
+            tags = input(&#34;Enter the tags (comma-separated) (or press Enter to skip): &#34;).split(&#39;,&#39;)
+            if tags:
+                criteria[&#39;tags&#39;] = tags
+            create_save_list(conn, output_archive, criteria)
+
+        elif choice == &#39;6&#39;:
+            file_path = input(&#34;Enter the file path: &#34;)
+            play_song(file_path)
+
+        elif choice == &#39;7&#39;:
+            song_id = input(&#34;Enter the song ID: &#34;)
+            play_song_by_id(conn, song_id)
+
+        elif choice == &#39;8&#39;:
+            show_all_songs()
+
+        elif choice == &#39;9&#39;:
+            print(&#34;All tags:&#34;)
+            for tag in get_all_tags(conn):
+                print(tag)
+
+        elif choice == &#39;10&#39;:
+            print(&#34;All songtags:&#34;)
+            for songtag in get_all_songtags(conn):
+                print(songtag)
+
+        elif choice == &#39;0&#39;:
+            print(&#34;Exiting Song Storage App. Bye!&#34;)
+            break
+        else:
+            print(&#34;Invalid choice. Please enter a valid option.&#34;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="main.add_song"><code class="name flex">
+<span>def <span class="ident">add_song</span></span>(<span>file_path, artist, title, release_date, tags)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds a new song to the database and storage folder.</p>
+<p>This function takes the necessary information about a song and inserts this information into the
+'songs', 'tags', and 'songtags' tables in the database. It also copies the song to the storage folder.
+It performs checks to ensure the file exists and has a valid file type.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>file_path (str): The file path of the song.
+artist (str): The artist of the song.
+title (str): The title of the song.
+release_date (str): The release date of the song.
+tags (list): A list of tags associated with the song.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>int or None: The ID of the added song in the 'songs' table, or None if the addition fails.
+</code></pre>
+<h2 id="raises">Raises</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+FileNotFoundError: If the specified file_path does not exist.
+ValueError: If the file type is not supported.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_song(file_path, artist, title, release_date, tags):
+    &#34;&#34;&#34;
+    Adds a new song to the database and storage folder.
+
+    This function takes the necessary information about a song and inserts this information into the
+    &#39;songs&#39;, &#39;tags&#39;, and &#39;songtags&#39; tables in the database. It also copies the song to the storage folder.
+    It performs checks to ensure the file exists and has a valid file type.
+
+    Parameters
+    ----------
+        file_path (str): The file path of the song.
+        artist (str): The artist of the song.
+        title (str): The title of the song.
+        release_date (str): The release date of the song.
+        tags (list): A list of tags associated with the song.
+
+    Returns
+    -------
+        int or None: The ID of the added song in the &#39;songs&#39; table, or None if the addition fails.
+
+    Raises
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+        FileNotFoundError: If the specified file_path does not exist.
+        ValueError: If the file type is not supported.
+    &#34;&#34;&#34;
+    database_connection = connect_to_database()
+    if database_connection:
+        song_id = add_song_to_database(database_connection, file_path, artist, title, release_date, tags)
+        if song_id:
+            add_song_to_storage(file_path)
+            database_connection.close()
+            return song_id
+        else:
+            database_connection.close()
+            return None
+    else:
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.add_song_to_database"><code class="name flex">
+<span>def <span class="ident">add_song_to_database</span></span>(<span>conn, file_path, artist, title, release_date, tags)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds a new song to the database.</p>
+<p>This function takes the necessary information about a song and inserts this information into the
+'songs', 'tags', and 'songtags' tables in the database. It performs checks to ensure the file
+exists and has a valid file type. </p>
+<h2 id="parameters">Parameters</h2>
+<p>conn (psycopg2.extensions.connection): The active database connection.
+file_path (str): The file path of the song.
+artist (str): The artist of the song.
+title (str): The title of the song.
+release_date (str): The release date of the song.
+tags (list): A list of tags associated with the song. </p>
+<h2 id="returns">Returns</h2>
+<p>int or None: The ID of the added song in the 'songs' table, or None if the addition fails.</p>
+<h2 id="raises">Raises</h2>
+<p>psycopg2.Error: If an error occurs during the database transaction.
+FileNotFoundError: If the specified file_path does not exist.
+ValueError: If the file type is not supported.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_song_to_database(conn, file_path, artist, title, release_date, tags):
+    &#34;&#34;&#34;
+        Adds a new song to the database.
+
+        This function takes the necessary information about a song and inserts this information into the
+        &#39;songs&#39;, &#39;tags&#39;, and &#39;songtags&#39; tables in the database. It performs checks to ensure the file
+        exists and has a valid file type. \n
+        Parameters
+        ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        file_path (str): The file path of the song.
+        artist (str): The artist of the song.
+        title (str): The title of the song.
+        release_date (str): The release date of the song.
+        tags (list): A list of tags associated with the song. \n
+
+        Returns
+        -------
+        int or None: The ID of the added song in the &#39;songs&#39; table, or None if the addition fails.\n
+
+        Raises
+        ------
+        psycopg2.Error: If an error occurs during the database transaction.
+        FileNotFoundError: If the specified file_path does not exist.
+        ValueError: If the file type is not supported.
+        &#34;&#34;&#34;
+    try:
+        if not file_exists(file_path):
+            logging.warning(f&#34;File does not exist: {file_path}&#34;)
+            print(f&#34;File does not exist: {file_path}&#34;)
+            return None
+
+        if not is_valid_file(file_path):
+            logging.warning(f&#34;Invalid file type: {file_path}&#34;)
+            print(f&#34;Invalid file type: {file_path}&#34;)
+            return None
+
+        if not is_valid_date(release_date):
+            logging.warning(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+            print(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+            return None
+
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            INSERT INTO songs(file_path, artist, title, release_date)
+            VALUES (%s, %s, %s, %s)
+            RETURNING id;
+        &#34;&#34;&#34;, (file_path, artist, title, release_date))
+
+        song_id = cursor.fetchone()[0]
+
+        for tag in tags:
+            cursor.execute(&#34;&#34;&#34;
+                INSERT INTO tags(name)
+                VALUES (%s)
+                ON CONFLICT (name) DO NOTHING;
+            &#34;&#34;&#34;, (tag,))
+
+            cursor.execute(&#34;&#34;&#34;
+                INSERT INTO songtags(song_id, tag_id)
+                VALUES (%s, (SELECT id FROM tags WHERE name = %s));
+            &#34;&#34;&#34;, (song_id, tag))
+
+        conn.commit()
+        logging.info(f&#34;Song added successfully with ID: {song_id}&#34;)
+        print(f&#34;Song added successfully: {song_id} - {artist} - {title} - {release_date} - {tags}&#34;)
+        return song_id
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to add song: %s&#34;, e)
+        print(f&#34;Failed to add song to database. {e}&#34;)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.add_song_to_storage"><code class="name flex">
+<span>def <span class="ident">add_song_to_storage</span></span>(<span>file_path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds a new song to the storage folder.</p>
+<p>This function takes the file path of a song and copies it to the storage folder. It performs
+checks to ensure the file exists and does not already exist in the storage folder.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>file_path (str): The file path of the song.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>str or None: The file path of the song in the storage folder, or None if the addition fails.
+</code></pre>
+<h2 id="raises">Raises</h2>
+<pre><code>FileNotFoundError: If the specified file_path does not exist.
+FileExistsError: If a file with the same name already exists in the storage folder.
+shutil.Error: If an error occurs during the file copy.
+Exception: If an unexpected error occurs.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_song_to_storage(file_path):
+    &#34;&#34;&#34;
+    Adds a new song to the storage folder.
+
+    This function takes the file path of a song and copies it to the storage folder. It performs
+    checks to ensure the file exists and does not already exist in the storage folder.
+
+    Parameters
+    ----------
+        file_path (str): The file path of the song.
+
+    Returns
+    -------
+        str or None: The file path of the song in the storage folder, or None if the addition fails.
+
+    Raises
+    ------
+        FileNotFoundError: If the specified file_path does not exist.
+        FileExistsError: If a file with the same name already exists in the storage folder.
+        shutil.Error: If an error occurs during the file copy.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f&#34;The file &#39;{file_path}&#39; does not exist.&#34;)
+
+        file_name = os.path.basename(file_path)
+        destination = os.path.join(song_storage_path, file_name)
+
+        if os.path.exists(destination):
+            raise FileExistsError(f&#34;A file with the same name already exists in the storage folder: {destination}&#34;)
+
+        try:
+            shutil.copy2(file_path, destination)
+        except shutil.Error as e:
+            logging.error(f&#34;Error copying file: {e}&#34;)
+            return None
+        logging.info(f&#34;Song added to storage: {destination}&#34;)
+        print(f&#34;Song added successfully to storage: {destination}&#34;)
+        return destination
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;Failed to add song to storage. {e}&#34;)
+        return None
+    except FileExistsError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;Failed to add song to storage. {e}&#34;)
+        return None
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;Failed to add song to storage. {e}&#34;)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.connect_to_database"><code class="name flex">
+<span>def <span class="ident">connect_to_database</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Connects to the database using the psycopg2 library.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>None
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>psycopg2.extensions.connection or None: The active database connection, or None if the connection fails.
+</code></pre>
+<h2 id="raises">Raises</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def connect_to_database():
+    &#34;&#34;&#34;
+    Connects to the database using the psycopg2 library.
+
+    Parameters
+    ----------
+        None
+
+    Returns
+    -------
+        psycopg2.extensions.connection or None: The active database connection, or None if the connection fails.
+
+    Raises
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        conn = psycopg2.connect(
+            host=&#34;localhost&#34;,
+            database=&#34;SongStorageDB&#34;,
+            user=&#34;postgres&#34;,
+            password=&#34;password&#34;,
+            port=5432
+        )
+        logging.info(&#34;Connected to the database.&#34;)
+        return conn
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to connect to the database: %s&#34;, e)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.create_save_list"><code class="name flex">
+<span>def <span class="ident">create_save_list</span></span>(<span>conn, output_archive, criteria)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates a save list of songs matching the search criteria.</p>
+<p>This function searches for songs in the 'songs' table in the database based on the specified criteria.
+It then creates a save list of the songs in the storage folder. </p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+output_archive (str): The path of the output archive.
+criteria (dict): A dictionary containing the search criteria.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>bool: True if the save list is created successfully, False otherwise.
+</code></pre>
+<h2 id="raises">Raises:</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_save_list(conn, output_archive, criteria):
+    &#34;&#34;&#34;
+    Creates a save list of songs matching the search criteria.
+
+    This function searches for songs in the &#39;songs&#39; table in the database based on the specified criteria.
+    It then creates a save list of the songs in the storage folder. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        output_archive (str): The path of the output archive.
+        criteria (dict): A dictionary containing the search criteria.
+    Returns:
+    -------
+        bool: True if the save list is created successfully, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        if not (output_archive.lower().endswith(&#39;.zip&#39;) or output_archive.lower().endswith(&#39;.rar&#39;)) :
+            output_archive += &#39;.zip&#39;
+
+        songs_to_archive = search_songs(conn, criteria)
+
+        if not songs_to_archive:
+            logging.warning(&#34;No matching songs found.&#34;)
+            print(&#34;No matching songs found.&#34;)
+            return False
+        else:
+            destination_path = os.path.join(song_storage_path, os.path.basename(output_archive))
+            with ZipFile(destination_path, &#39;w&#39;) as archive:
+                for song in songs_to_archive:
+                    song_path = song[1]
+                    if os.path.exists(song_path):
+                        archive.write(song_path, os.path.basename(song_path))
+
+        logging.info(f&#34;Save list created successfully: {output_archive}&#34;)
+        print(f&#34;Save list created successfully: {output_archive}&#34;)
+        return True
+    except Exception as e:
+        logging.error(f&#34;An error occurred while creating the save list: {e}&#34;)
+        print(f&#34;An error occurred while creating the save list: {e}&#34;)
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.delete_song"><code class="name flex">
+<span>def <span class="ident">delete_song</span></span>(<span>song_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Deletes a song from the database and storage folder.</p>
+<p>This function removes a song and its associated tags from the 'songs' table and 'tags' table
+in the database. It also removes the song from the storage folder. It performs checks to ensure
+the song exists in the database and storage folder.</p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>song_id (int): The ID of the song to be deleted.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>bool: True if the deletion is successful, False otherwise.
+</code></pre>
+<h2 id="raises">Raises:</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+FileNotFoundError: If the specified file_name does not exist in the storage folder.
+Exception: If an unexpected error occurs.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def delete_song(song_id):
+    &#34;&#34;&#34;
+    Deletes a song from the database and storage folder.
+
+    This function removes a song and its associated tags from the &#39;songs&#39; table and &#39;tags&#39; table
+    in the database. It also removes the song from the storage folder. It performs checks to ensure
+    the song exists in the database and storage folder.
+
+    Parameters:
+    ----------
+        song_id (int): The ID of the song to be deleted.
+
+    Returns:
+    -------
+        bool: True if the deletion is successful, False otherwise.
+
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+        FileNotFoundError: If the specified file_name does not exist in the storage folder.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    database_connection = connect_to_database()
+
+    if database_connection:
+        try:
+            song_path = get_song_path_from_database(database_connection, song_id)
+            if delete_song_from_database(database_connection, song_id):
+                if song_path:
+                    file_name = os.path.basename(song_path)
+                    delete_song_from_storage(file_name)
+                    return True
+                else:
+                    return False
+            else:
+                return False
+
+        finally:
+            database_connection.close()
+    else:
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.delete_song_from_database"><code class="name flex">
+<span>def <span class="ident">delete_song_from_database</span></span>(<span>conn, song_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Deletes a song from the database.</p>
+<p>This function removes a song and its associated tags from the 'songs' table and 'tags' table
+in the database. It performs checks to ensure the song exists in the database. </p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+song_id (int): The ID of the song to be deleted.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>bool: True if the deletion is successful, False otherwise.
+</code></pre>
+<h2 id="raises">Raises:</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def delete_song_from_database(conn, song_id):
+
+    &#34;&#34;&#34;
+    Deletes a song from the database.
+
+    This function removes a song and its associated tags from the &#39;songs&#39; table and &#39;tags&#39; table
+    in the database. It performs checks to ensure the song exists in the database. \n
+
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be deleted.
+    Returns:
+    -------
+        bool: True if the deletion is successful, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            SELECT id FROM songs WHERE id = %s;
+        &#34;&#34;&#34;, (song_id,))
+        existing_id = cursor.fetchone()
+
+        if existing_id:
+            cursor.execute(&#34;&#34;&#34;
+                DELETE FROM songtags 
+                WHERE song_id = %s;
+            &#34;&#34;&#34;, (song_id,))
+
+            cursor.execute(&#34;&#34;&#34;
+                DELETE FROM songs
+                WHERE id = %s;
+            &#34;&#34;&#34;, (song_id,))
+
+            conn.commit()
+            logging.info(f&#34;Song deleted successfully with ID: {song_id}&#34;)
+            print(f&#34;Song deleted successfully with ID: {song_id}&#34;)
+            return True
+        else:
+            logging.warning(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            print(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            return False
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to delete song: %s&#34;, e)
+        print(f&#34;Failed to delete song from database. {e}&#34;)
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.delete_song_from_storage"><code class="name flex">
+<span>def <span class="ident">delete_song_from_storage</span></span>(<span>file_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Deletes a song from the storage folder.</p>
+<p>This function removes a song from the storage folder. It performs checks to ensure the song exists
+in the storage folder.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>file_name (str): The file name of the song to be deleted.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>bool: True if the deletion is successful, False otherwise.
+</code></pre>
+<h2 id="raises">Raises</h2>
+<pre><code>FileNotFoundError: If the specified file_name does not exist in the storage folder.
+Exception: If an unexpected error occurs.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def delete_song_from_storage(file_name):
+    &#34;&#34;&#34;
+    Deletes a song from the storage folder.
+
+    This function removes a song from the storage folder. It performs checks to ensure the song exists
+    in the storage folder.
+
+    Parameters
+    ----------
+        file_name (str): The file name of the song to be deleted.
+
+    Returns
+    -------
+        bool: True if the deletion is successful, False otherwise.
+
+    Raises
+    ------
+        FileNotFoundError: If the specified file_name does not exist in the storage folder.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    try:
+        storage_path = os.path.join(song_storage_path, file_name)
+
+        if not os.path.exists(storage_path):
+            raise FileNotFoundError(f&#34;The file &#39;{storage_path}&#39; does not exist.&#34;)
+
+        os.remove(storage_path)
+        logging.info(f&#34;Song deleted from storage: {storage_path}&#34;)
+        print(f&#34;Song deleted successfully from storage: {storage_path}&#34;)
+        return True
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;The file does not exist.&#34;)
+        return False
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;Failed to delete song from storage. {e}&#34;)
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.file_exists"><code class="name flex">
+<span>def <span class="ident">file_exists</span></span>(<span>file_path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if a file exists.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>file_path (str): The file path to check.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>bool: True if the file exists, False otherwise.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def file_exists(file_path):
+    &#34;&#34;&#34;
+    Checks if a file exists.
+
+    Parameters
+    ----------
+        file_path (str): The file path to check.
+
+    Returns
+    -------
+        bool: True if the file exists, False otherwise.
+    &#34;&#34;&#34;
+    return os.path.exists(file_path)</code></pre>
+</details>
+</dd>
+<dt id="main.get_all_songtags"><code class="name flex">
+<span>def <span class="ident">get_all_songtags</span></span>(<span>conn)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves all entries from the 'songtags' table.</p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>list or None: A list of songtags, or None if the operation fails.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_all_songtags(conn):
+    &#34;&#34;&#34;
+    Retrieves all entries from the &#39;songtags&#39; table.
+
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+
+    Returns:
+    -------
+        list or None: A list of songtags, or None if the operation fails.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;SELECT song_id, tag_id FROM songtags&#34;)
+        result = cursor.fetchall()
+
+        songtags_list = [{&#34;song_id&#34;: songtag[0], &#34;tag_id&#34;: songtag[1]} for songtag in result]
+        return songtags_list
+    except psycopg2.Error as e:
+        logging.error(&#34;An error occurred while retrieving songtags: %s&#34;, e)
+        print(f&#34;An error occurred while retrieving songtags: {e}&#34;)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.get_all_tags"><code class="name flex">
+<span>def <span class="ident">get_all_tags</span></span>(<span>conn)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves all tags from the 'tags' table.</p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>list or None: A list of tags, or None if the operation fails.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_all_tags(conn):
+    &#34;&#34;&#34;
+    Retrieves all tags from the &#39;tags&#39; table.
+
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+
+    Returns:
+    -------
+        list or None: A list of tags, or None if the operation fails.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;SELECT id, name FROM tags&#34;)
+        result = cursor.fetchall()
+
+        tags_list = [{&#34;id&#34;: tag[0], &#34;name&#34;: tag[1]} for tag in result]
+        return tags_list
+    except psycopg2.Error as e:
+        logging.error(&#34;An error occurred while retrieving tags: %s&#34;, e)
+        print(f&#34;An error occurred while retrieving tags: {e}&#34;)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.get_song_path_from_database"><code class="name flex">
+<span>def <span class="ident">get_song_path_from_database</span></span>(<span>conn, song_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the file path of a song from the database.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+song_id (int): The ID of the song to be retrieved.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>str or None: The file path of the song, or None if the song does not exist in the database.
+</code></pre>
+<h2 id="raises">Raises</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_song_path_from_database(conn, song_id):
+    &#34;&#34;&#34;
+    Retrieves the file path of a song from the database.
+
+    Parameters
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be retrieved.
+
+    Returns
+    -------
+        str or None: The file path of the song, or None if the song does not exist in the database.
+
+    Raises
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            SELECT file_path FROM songs WHERE id = %s;
+        &#34;&#34;&#34;, (song_id,))
+        result = cursor.fetchone()
+
+        if result:
+            song_path = result[0]
+            logging.info(f&#34;Song path retrieved successfully: {song_path}&#34;)
+            print(f&#34;Song path retrieved successfully: {song_path}&#34;)
+            return song_path
+        else:
+            logging.warning(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            print(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            return None
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to retrieve song path: %s&#34;, e)
+        print(f&#34;Failed to retrieve song path from database. {e}&#34;)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.is_valid_date"><code class="name flex">
+<span>def <span class="ident">is_valid_date</span></span>(<span>date_string)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if a date string has a valid YYYY-MM-DD format.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>date_string (str): The date string to check.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>bool: True if the date string has a valid format, False otherwise.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_valid_date(date_string):
+    &#34;&#34;&#34;
+    Checks if a date string has a valid YYYY-MM-DD format.
+
+    Parameters
+    ----------
+        date_string (str): The date string to check.
+
+    Returns
+    -------
+        bool: True if the date string has a valid format, False otherwise.
+    &#34;&#34;&#34;
+    try:
+        datetime.strptime(date_string, &#39;%Y-%m-%d&#39;)
+        return True
+    except ValueError:
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.is_valid_file"><code class="name flex">
+<span>def <span class="ident">is_valid_file</span></span>(<span>file_path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if a file has a valid file type.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>file_path (str): The file path to check.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>bool: True if the file has a valid file type, False otherwise.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_valid_file(file_path):
+    &#34;&#34;&#34;
+    Checks if a file has a valid file type.
+
+    Parameters
+    ----------
+        file_path (str): The file path to check.
+
+    Returns
+    -------
+        bool: True if the file has a valid file type, False otherwise.
+    &#34;&#34;&#34;
+    valid_extensions = {&#39;.mp3&#39;, &#39;.wav&#39;, &#39;.aac&#39;, &#39;.wma&#39;, &#39;.flac&#39;}
+    _, file_extension = os.path.splitext(file_path)
+    return file_extension.lower() in valid_extensions</code></pre>
+</details>
+</dd>
+<dt id="main.modify_data"><code class="name flex">
+<span>def <span class="ident">modify_data</span></span>(<span>conn, song_id, artist=None, title=None, release_date=None, tags=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Modifies the metadata of a song in the database.</p>
+<p>This function modifies the metadata of a song in the 'songs' table in the database. It performs
+checks to ensure the song exists in the database. </p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+song_id (int): The ID of the song to be modified.
+artist (str): The new artist of the song.
+title (str): The new title of the song.
+release_date (str): The new release date of the song.
+tags (list): A list of new tags associated with the song.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>bool: True if the modification is successful, False otherwise.
+</code></pre>
+<h2 id="raises">Raises:</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def modify_data(conn, song_id, artist=None, title=None, release_date=None, tags=None):
+    &#34;&#34;&#34;
+    Modifies the metadata of a song in the database.
+
+    This function modifies the metadata of a song in the &#39;songs&#39; table in the database. It performs
+    checks to ensure the song exists in the database. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be modified.
+        artist (str): The new artist of the song.
+        title (str): The new title of the song.
+        release_date (str): The new release date of the song.
+        tags (list): A list of new tags associated with the song.
+    Returns:
+    -------
+        bool: True if the modification is successful, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute(&#34;&#34;&#34;
+            SELECT id FROM songs WHERE id = %s;
+        &#34;&#34;&#34;, (song_id,))
+        existing_id = cursor.fetchone()
+
+        if existing_id:
+            if artist:
+                cursor.execute(&#34;&#34;&#34;
+                    UPDATE songs
+                    SET artist = %s
+                    WHERE id = %s;
+                &#34;&#34;&#34;, (artist, song_id))
+
+            if title:
+                cursor.execute(&#34;&#34;&#34;
+                    UPDATE songs
+                    SET title = %s
+                    WHERE id = %s;
+                &#34;&#34;&#34;, (title, song_id))
+
+            if release_date:
+                if not is_valid_date(release_date):
+                    logging.warning(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+                    print(f&#34;Invalid date format: {release_date}. Please use YYYY-MM-DD.&#34;)
+                    return False
+                cursor.execute(&#34;&#34;&#34;
+                    UPDATE songs
+                    SET release_date = %s
+                    WHERE id = %s;
+                &#34;&#34;&#34;, (release_date, song_id))
+
+            if tags:
+                cursor.execute(&#34;&#34;&#34;
+                    DELETE FROM songtags 
+                    WHERE song_id = %s;
+                &#34;&#34;&#34;, (song_id,))
+
+                for tag in tags:
+                    cursor.execute(&#34;&#34;&#34;
+                        INSERT INTO tags(name)
+                        VALUES (%s)
+                        ON CONFLICT (name) DO NOTHING;
+                    &#34;&#34;&#34;, (tag,))
+
+                    cursor.execute(&#34;&#34;&#34;
+                        INSERT INTO songtags(song_id, tag_id)
+                        VALUES (%s, (SELECT id FROM tags WHERE name = %s));
+                    &#34;&#34;&#34;, (song_id, tag))
+
+            conn.commit()
+            logging.info(f&#34;Song updated successfully with ID: {song_id}&#34;)
+            print(f&#34;Song updated successfully: {song_id} - {artist} - {title} - {release_date} - {tags}&#34;)
+            return True
+        else:
+            logging.warning(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            print(f&#34;Song with ID {song_id} does not exist in the database.&#34;)
+            return False
+    except psycopg2.Error as e:
+        logging.error(&#34;Unable to update song: %s&#34;, e)
+        print(f&#34;Failed to update song in database. {e}&#34;)
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.play_song"><code class="name flex">
+<span>def <span class="ident">play_song</span></span>(<span>file_path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plays a song.</p>
+<p>This function plays a song using the Pygame library. It performs checks to ensure the file exists
+and has a valid file type. </p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>file_path (str): The file path of the song.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>bool: True if the song is played successfully, False otherwise.
+</code></pre>
+<h2 id="raises">Raises:</h2>
+<pre><code>FileNotFoundError: If the specified file_path does not exist.
+pygame.error: If an error occurs during the song playback.
+Exception: If an unexpected error occurs.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def play_song(file_path):
+    &#34;&#34;&#34;
+    Plays a song.
+
+    This function plays a song using the Pygame library. It performs checks to ensure the file exists
+    and has a valid file type. \n
+    Parameters:
+    ----------
+        file_path (str): The file path of the song.
+    Returns:
+    -------
+        bool: True if the song is played successfully, False otherwise.
+    Raises:
+    ------
+        FileNotFoundError: If the specified file_path does not exist.
+        pygame.error: If an error occurs during the song playback.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f&#34;The file &#39;{file_path}&#39; does not exist.&#34;)
+
+        pygame.init()
+        played_song = pygame.mixer.Sound(file_path)
+        played_song.play()
+
+        logging.info(f&#34;Song started: {file_path}&#34;)
+        print(f&#34;Song started: {file_path}&#34;)
+
+        while pygame.mixer.get_busy() and not keyboard.is_pressed(&#39;enter&#39;):
+            pygame.time.Clock().tick(10)
+
+        pygame.mixer.stop()
+        pygame.quit()
+
+        logging.info(f&#34;Song stopped: {file_path}&#34;)
+        print(f&#34;Song stopped: {file_path}&#34;)
+
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;The file does not exist.&#34;)
+        return False
+    except pygame.error as e:
+        logging.error(f&#34;Pygame error: {e}&#34;)
+        print(f&#34;Pygame error: {e}&#34;)
+        return False
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;An unexpected error occurred: {e}&#34;)
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.play_song_by_id"><code class="name flex">
+<span>def <span class="ident">play_song_by_id</span></span>(<span>conn, song_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plays a song based on its ID.</p>
+<p>This function retrieves the file path of a song using the specified ID from the database
+and plays the song using the Pygame library.</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+song_id (int): The ID of the song to be played.
+</code></pre>
+<h2 id="returns">Returns</h2>
+<pre><code>bool: True if the song is played successfully, False otherwise.
+</code></pre>
+<h2 id="raises">Raises</h2>
+<pre><code>FileNotFoundError: If the specified file_path does not exist.
+pygame.error: If an error occurs during the song playback.
+Exception: If an unexpected error occurs.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def play_song_by_id(conn, song_id):
+    &#34;&#34;&#34;
+    Plays a song based on its ID.
+
+    This function retrieves the file path of a song using the specified ID from the database
+    and plays the song using the Pygame library.
+
+    Parameters
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        song_id (int): The ID of the song to be played.
+
+    Returns
+    -------
+        bool: True if the song is played successfully, False otherwise.
+
+    Raises
+    ------
+        FileNotFoundError: If the specified file_path does not exist.
+        pygame.error: If an error occurs during the song playback.
+        Exception: If an unexpected error occurs.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        # Retrieve file path based on song_id
+        cursor.execute(f&#34;SELECT file_path FROM songs WHERE id = {song_id}&#34;)
+        result = cursor.fetchone()
+
+        if not result:
+            logging.warning(f&#34;No song found with ID {song_id}.&#34;)
+            print(f&#34;No song found with ID {song_id}.&#34;)
+            return False
+
+        file_path = result[0]
+
+        if not os.path.exists(file_path) or not is_valid_file(file_path):
+            raise FileNotFoundError(f&#34;The file &#39;{file_path}&#39; does not exist or is not a valid audio file.&#34;)
+
+        pygame.init()
+        played_song = pygame.mixer.Sound(file_path)
+        played_song.play()
+
+        logging.info(f&#34;Song started: {file_path}&#34;)
+        print(f&#34;Song started: {file_path}&#34;)
+
+        while pygame.mixer.get_busy() and not keyboard.is_pressed(&#39;enter&#39;):
+            pygame.time.Clock().tick(10)
+
+        pygame.mixer.stop()
+        pygame.quit()
+
+        logging.info(f&#34;Song stopped: {file_path}&#34;)
+        print(f&#34;Song stopped: {file_path}&#34;)
+        return True
+
+    except FileNotFoundError as e:
+        logging.error(f&#34;Error: {e}&#34;)
+        print(f&#34;The file does not exist or is not a valid audio file.&#34;)
+        return False
+    except psycopg2.Error as e:
+        logging.error(f&#34;Database error: {e}&#34;)
+        print(f&#34;Database error: {e}&#34;)
+        return False
+    except pygame.error as e:
+        logging.error(f&#34;Pygame error: {e}&#34;)
+        print(f&#34;Pygame error: {e}&#34;)
+        return False
+    except Exception as e:
+        logging.error(f&#34;An unexpected error occurred: {e}&#34;)
+        print(f&#34;An unexpected error occurred: {e}&#34;)
+        return False</code></pre>
+</details>
+</dd>
+<dt id="main.search_songs"><code class="name flex">
+<span>def <span class="ident">search_songs</span></span>(<span>conn, criteria)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Searches for songs based on the specified criteria.</p>
+<p>This function searches for songs in the 'songs' table in the database based on the specified criteria. </p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+criteria (dict): A dictionary containing the search criteria.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>list or None: A list of songs matching the search criteria, or None if the search fails.
+</code></pre>
+<h2 id="raises">Raises:</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def search_songs(conn, criteria):
+    &#34;&#34;&#34;
+    Searches for songs based on the specified criteria.
+
+    This function searches for songs in the &#39;songs&#39; table in the database based on the specified criteria. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+        criteria (dict): A dictionary containing the search criteria.
+    Returns:
+    -------
+        list or None: A list of songs matching the search criteria, or None if the search fails.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    try:
+        cursor = conn.cursor()
+
+        query = &#34;&#34;&#34;
+            SELECT s.id, s.file_path, s.artist, s.title, s.release_date, COALESCE(array_agg(t.name), ARRAY[]::text[])
+            FROM songs s
+            LEFT JOIN songtags st ON s.id = st.song_id
+            LEFT JOIN tags t ON st.tag_id = t.id
+            WHERE true
+        &#34;&#34;&#34;
+
+        for key, value in criteria.items():
+            if key == &#39;tags&#39;:
+                tags_condition = &#39; OR &#39;.join([f&#34;t.name LIKE &#39;%{tag}%&#39;&#34; for tag in value])
+                if tags_condition:
+                    query += f&#34; AND ({tags_condition})&#34;
+            elif key == &#39;release_date&#39;:
+                if is_valid_date(value):
+                    query += f&#34; AND {key} = &#39;{value}&#39;::date&#34;
+            elif key == &#39;file_extension&#39;:
+                if value:
+                    query += f&#34; AND s.file_path ILIKE &#39;%{value}&#39;&#34;
+            else:
+                if value:
+                    query += f&#34; AND {key} LIKE &#39;%{value}%&#39;&#34;
+
+        query += &#34; GROUP BY s.id, s.file_path, s.artist, s.title, s.release_date&#34;
+
+        cursor.execute(query)
+        result = cursor.fetchall()
+
+        if result:
+            logging.info(&#34;Search results:&#34;)
+            print(&#34;Search results:&#34;)
+            for song in result:
+                logging.info(
+                    f&#34;ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}, Tags: {song[5]}&#34;)
+                print(
+                    f&#34;ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}, Tags: {song[5]}&#34;)
+        else:
+            logging.warning(&#34;No matching songs found.&#34;)
+            print(&#34;No matching songs found.&#34;)
+
+        return result
+    except psycopg2.Error as e:
+        logging.error(&#34;An error occurred during search: %s&#34;, e)
+        print(f&#34;An error occurred during search: {e}&#34;)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="main.show_all_songs"><code class="name flex">
+<span>def <span class="ident">show_all_songs</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Displays all songs in the database.</p>
+<p>This function displays all songs in the 'songs' table in the database and associated tags. </p>
+<h2 id="parameters">Parameters:</h2>
+<pre><code>conn (psycopg2.extensions.connection): The active database connection.
+</code></pre>
+<h2 id="returns">Returns:</h2>
+<pre><code>bool: True if the songs are displayed successfully, False otherwise.
+</code></pre>
+<h2 id="raises">Raises:</h2>
+<pre><code>psycopg2.Error: If an error occurs during the database transaction.
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_all_songs():
+    &#34;&#34;&#34;
+    Displays all songs in the database.
+
+    This function displays all songs in the &#39;songs&#39; table in the database and associated tags. \n
+    Parameters:
+    ----------
+        conn (psycopg2.extensions.connection): The active database connection.
+    Returns:
+    -------
+        bool: True if the songs are displayed successfully, False otherwise.
+    Raises:
+    ------
+        psycopg2.Error: If an error occurs during the database transaction.
+    &#34;&#34;&#34;
+    conn = connect_to_database()
+    try:
+        cursor = conn.cursor()
+        cursor.execute(&#34;&#34;&#34;
+            SELECT s.id, s.file_path, s.artist, s.title, s.release_date, COALESCE(array_agg(t.name), ARRAY[]::text[]) AS tags
+            FROM songs s
+            LEFT JOIN songtags st ON s.id = st.song_id
+            LEFT JOIN tags t ON st.tag_id = t.id
+            GROUP BY s.id
+        &#34;&#34;&#34;)
+        result = cursor.fetchall()
+        if result:
+            print(&#34;All songs:&#34;)
+            for song in result:
+                print(
+                    f&#34;ID: {song[0]}, File Path: {song[1]}, Artist: {song[2]}, Title: {song[3]}, Release Date: {song[4]}, Tags: {song[5]}&#34;)
+            logging.info(&#34;All songs displayed successfully.&#34;)
+        else:
+            print(&#34;No songs found.&#34;)
+            logging.warning(&#34;No songs found.&#34;)
+    except psycopg2.Error as e:
+        print(f&#34;An error occurred during search: {e}&#34;)
+        logging.error(&#34;An error occurred during search: %s&#34;, e)
+        return None
+    finally:
+        conn.close()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="main.add_song" href="#main.add_song">add_song</a></code></li>
+<li><code><a title="main.add_song_to_database" href="#main.add_song_to_database">add_song_to_database</a></code></li>
+<li><code><a title="main.add_song_to_storage" href="#main.add_song_to_storage">add_song_to_storage</a></code></li>
+<li><code><a title="main.connect_to_database" href="#main.connect_to_database">connect_to_database</a></code></li>
+<li><code><a title="main.create_save_list" href="#main.create_save_list">create_save_list</a></code></li>
+<li><code><a title="main.delete_song" href="#main.delete_song">delete_song</a></code></li>
+<li><code><a title="main.delete_song_from_database" href="#main.delete_song_from_database">delete_song_from_database</a></code></li>
+<li><code><a title="main.delete_song_from_storage" href="#main.delete_song_from_storage">delete_song_from_storage</a></code></li>
+<li><code><a title="main.file_exists" href="#main.file_exists">file_exists</a></code></li>
+<li><code><a title="main.get_all_songtags" href="#main.get_all_songtags">get_all_songtags</a></code></li>
+<li><code><a title="main.get_all_tags" href="#main.get_all_tags">get_all_tags</a></code></li>
+<li><code><a title="main.get_song_path_from_database" href="#main.get_song_path_from_database">get_song_path_from_database</a></code></li>
+<li><code><a title="main.is_valid_date" href="#main.is_valid_date">is_valid_date</a></code></li>
+<li><code><a title="main.is_valid_file" href="#main.is_valid_file">is_valid_file</a></code></li>
+<li><code><a title="main.modify_data" href="#main.modify_data">modify_data</a></code></li>
+<li><code><a title="main.play_song" href="#main.play_song">play_song</a></code></li>
+<li><code><a title="main.play_song_by_id" href="#main.play_song_by_id">play_song_by_id</a></code></li>
+<li><code><a title="main.search_songs" href="#main.search_songs">search_songs</a></code></li>
+<li><code><a title="main.show_all_songs" href="#main.show_all_songs">show_all_songs</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
